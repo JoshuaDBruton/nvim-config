@@ -1,2 +1,2 @@
-require("joshua.remap")
 require("joshua.packer")
+require("joshua.set")
