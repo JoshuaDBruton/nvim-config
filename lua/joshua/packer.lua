@@ -28,13 +28,12 @@ return require('packer').startup(function(use)
 	  end,
   }
   use('nvim-treesitter/playground')
-  
+
   use('theprimeagen/harpoon')
   use('theprimeagen/vim-be-good')
 
   use('mbbill/undotree')
 
-  use({'neovim/nvim-lspconfig'})
   use({'hrsh7th/nvim-cmp'})
   use({'hrsh7th/cmp-nvim-lsp'})
   use {
@@ -43,4 +42,8 @@ return require('packer').startup(function(use)
 	  "neovim/nvim-lspconfig",
   }
   use({"stevearc/oil.nvim"})
+
+  use({"tpope/vim-dadbod"})
+  use({"kristijanhusak/vim-dadbod-ui"})
+  use({"kristijanhusak/vim-dadbod-completion"})
 end)

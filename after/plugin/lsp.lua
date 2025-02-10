@@ -14,7 +14,7 @@ require('mason').setup({})
 require('mason-lspconfig').setup({
   -- Replace the language servers listed here
   -- with the ones you want to install
-  ensure_installed = {'lua_ls', 'omnisharp', 'cssls', 'html', 'eslint', 'grammarly', 'nginx_language_server', 'ruff', 'sqlls', 'ts_ls', 'volar'},
+  ensure_installed = {'lua_ls', 'omnisharp', 'cssls', 'html', 'eslint', 'grammarly', 'nginx_language_server', 'pylsp', 'ruff', 'sqlls', 'ts_ls', 'volar'},
   handlers = {
     function(server_name)
       require('lspconfig')[server_name].setup({})
@@ -44,7 +44,8 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
 -- So this is to run the language servers
 require('lspconfig').omnisharp.setup({})
-require('lspconfig').ruff.setup({})
+
+--require('lspconfig').ruff.setup({})
 
 local cmp = require('cmp')
 
@@ -59,4 +60,17 @@ cmp.setup({
     end,
   },
   mapping = cmp.mapping.preset.insert({}),
+})
+
+vim.g.db_ui_use_nerd_fonts = 1
+
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = {"sql", "mysql", "plsql"},
+    callback = function()
+        cmp.setup.buffer {
+            sources = {
+                { name = 'vim-dadbod-completion' }
+            }
+        }
+    end,
 })
