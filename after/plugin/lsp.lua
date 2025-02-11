@@ -10,7 +10,9 @@ lspconfig_defaults.capabilities = vim.tbl_deep_extend(
   require('cmp_nvim_lsp').default_capabilities()
 )
 
-require('mason').setup({})
+require("mason").setup({
+    PATH = "prepend", -- "skip" seems to cause the spawning error
+})
 require('mason-lspconfig').setup({
   -- Replace the language servers listed here
   -- with the ones you want to install
@@ -43,7 +45,11 @@ vim.api.nvim_create_autocmd('LspAttach', {
 })
 
 -- So this is to run the language servers
-require('lspconfig').omnisharp.setup({})
+require('lspconfig').omnisharp.setup({
+    handlers = {
+        ["textDocument/definition"] = require('omnisharp_extended').handler,
+    },
+})
 
 --require('lspconfig').ruff.setup({})
 
