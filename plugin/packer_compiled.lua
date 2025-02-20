@@ -169,6 +169,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/joshua/.local/share/nvim/site/pack/packer/start/vim-dadbod-ui",
     url = "https://github.com/kristijanhusak/vim-dadbod-ui"
+  },
+  ["vim-razor"] = {
+    loaded = true,
+    path = "/home/joshua/.local/share/nvim/site/pack/packer/start/vim-razor",
+    url = "https://github.com/jlcrochet/vim-razor"
+  },
+  ["vim-visual-multi"] = {
+    loaded = true,
+    path = "/home/joshua/.local/share/nvim/site/pack/packer/start/vim-visual-multi",
+    url = "https://github.com/mg979/vim-visual-multi"
   }
 }
 

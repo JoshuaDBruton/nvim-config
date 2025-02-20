@@ -48,4 +48,8 @@ return require('packer').startup(function(use)
   use({"kristijanhusak/vim-dadbod-completion"})
 
   use({"Hoffs/omnisharp-extended-lsp.nvim"})
+
+  use({"jlcrochet/vim-razor"})
+
+  use({"mg979/vim-visual-multi"})
 end)
