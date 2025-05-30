@@ -16,7 +16,20 @@ require("mason").setup({
 require('mason-lspconfig').setup({
   -- Replace the language servers listed here
   -- with the ones you want to install
-  ensure_installed = {'lua_ls', 'omnisharp', 'cssls', 'html', 'eslint', 'grammarly', 'nginx_language_server', 'pylsp', 'ruff', 'sqlls', 'ts_ls', 'volar'},
+  ensure_installed = {
+      'lua_ls',
+      'omnisharp',
+      'cssls',
+      'html',
+      'eslint',
+      'grammarly',
+      'nginx_language_server',
+      'pylsp',
+      'ruff',
+      'sqlls',
+      'ts_ls',
+      'volar'
+  },
   handlers = {
     function(server_name)
       require('lspconfig')[server_name].setup({})
@@ -51,7 +64,33 @@ require('lspconfig').omnisharp.setup({
     },
 })
 
---require('lspconfig').ruff.setup({})
+local vue_typescript_plugin = '/home/joshua/.config/nvm/versions/node/v18.20.6'
+  .. '/lib/node_modules'
+  .. '/@vue/language-server/node_modules'
+  .. '@vue/typescript-plugin'
+
+require('lspconfig').ts_ls.setup({
+  init_options = {
+    plugins = {
+      {
+        name = "@vue/typescript-plugin",
+        location = vue_typescript_plugin,
+        languages = {'javascript', 'typescript', 'vue'}
+      },
+    }
+  },
+  filetypes = {
+    'javascript',
+    'javascriptreact',
+    'javascript.jsx',
+    'typescript',
+    'typescriptreact',
+    'typescript.tsx',
+    'vue',
+  },
+})
+
+require('lspconfig').volar.setup({})
 
 local cmp = require('cmp')
 
