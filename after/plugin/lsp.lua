@@ -63,10 +63,10 @@ require('lspconfig').omnisharp.setup({
     },
 })
 
-local vue_typescript_plugin = '/home/joshua/.config/nvm/versions/node/v18.20.6'
+local vue_typescript_plugin = '~/.config/nvm/versions/node/v18.20.6'
   .. '/lib/node_modules'
   .. '/@vue/language-server/node_modules'
-  .. '@vue/typescript-plugin'
+  .. '/@vue/typescript-plugin'
 
 require('lspconfig').ts_ls.setup({
   init_options = {
@@ -85,11 +85,12 @@ require('lspconfig').ts_ls.setup({
     'typescript',
     'typescriptreact',
     'typescript.tsx',
-    'vue',
   },
 })
 
-require('lspconfig').volar.setup({})
+require('lspconfig').volar.setup({
+    filetypes = { 'vue' },
+})
 
 local cmp = require('cmp')
 
