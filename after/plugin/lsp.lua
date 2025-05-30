@@ -28,7 +28,6 @@ require('mason-lspconfig').setup({
       'ruff',
       'sqlls',
       'ts_ls',
-      'volar'
   },
   handlers = {
     function(server_name)
