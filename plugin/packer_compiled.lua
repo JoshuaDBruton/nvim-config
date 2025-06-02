@@ -129,11 +129,6 @@ _G.packer_plugins = {
     path = "/home/joshua/.local/share/nvim/site/pack/packer/start/oil.nvim",
     url = "https://github.com/stevearc/oil.nvim"
   },
-  ["omnisharp-extended-lsp.nvim"] = {
-    loaded = true,
-    path = "/home/joshua/.local/share/nvim/site/pack/packer/start/omnisharp-extended-lsp.nvim",
-    url = "https://github.com/Hoffs/omnisharp-extended-lsp.nvim"
-  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/joshua/.local/share/nvim/site/pack/packer/start/packer.nvim",

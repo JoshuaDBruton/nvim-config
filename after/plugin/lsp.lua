@@ -56,13 +56,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
   end,
 })
 
--- So this is to run the language servers
-require('lspconfig').omnisharp.setup({
-    handlers = {
-        ["textDocument/definition"] = require('omnisharp_extended').handler,
-    },
-})
-
 local vue_typescript_plugin = '~/.config/nvm/versions/node/v18.20.6'
   .. '/lib/node_modules'
   .. '/@vue/language-server/node_modules'
