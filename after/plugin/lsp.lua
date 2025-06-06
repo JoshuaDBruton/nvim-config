@@ -1,3 +1,19 @@
+require('lspconfig').lua_ls.setup({
+  settings = {
+    Lua = {
+      diagnostics = {
+        globals = { 'vim' }, -- Recognize the `vim` global
+      },
+      workspace = {
+        -- Make the server aware of Neovim runtime files
+        library = vim.api.nvim_get_runtime_file("", true),
+        checkThirdParty = false, -- Optional: disables annoying prompts
+      },
+      telemetry = { enable = false }, -- Optional: disables telemetry
+    },
+  },
+})
+
 -- Reserve a space in the gutter
 vim.opt.signcolumn = 'yes'
 
@@ -112,3 +128,12 @@ vim.api.nvim_create_autocmd("FileType", {
         }
     end,
 })
+
+vim.diagnostic.config({
+  virtual_text = true,
+  signs = true,
+  underline = true,
+  update_in_insert = false,
+  severity_sort = true,
+})
+
