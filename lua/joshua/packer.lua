@@ -18,6 +18,10 @@ return require('packer').startup(function(use)
 
   use 'iruzo/matrix-nvim'
 
+  use 'thesimonho/kanagawa-paper.nvim'
+
+  use 'aliqyan-21/darkvoid.nvim'
+
   use {
 	  'nvim-treesitter/nvim-treesitter',
 	  run = function()

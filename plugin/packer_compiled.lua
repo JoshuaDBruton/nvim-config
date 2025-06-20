@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/home/joshua/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
+  ["darkvoid.nvim"] = {
+    loaded = true,
+    path = "/home/joshua/.local/share/nvim/site/pack/packer/start/darkvoid.nvim",
+    url = "https://github.com/aliqyan-21/darkvoid.nvim"
+  },
   everforest = {
     loaded = true,
     path = "/home/joshua/.local/share/nvim/site/pack/packer/start/everforest",
@@ -88,6 +93,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/joshua/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/theprimeagen/harpoon"
+  },
+  ["kanagawa-paper.nvim"] = {
+    loaded = true,
+    path = "/home/joshua/.local/share/nvim/site/pack/packer/start/kanagawa-paper.nvim",
+    url = "https://github.com/thesimonho/kanagawa-paper.nvim"
   },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
